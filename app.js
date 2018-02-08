@@ -79,6 +79,6 @@ app.get('/excel', (req, res) => {
   })
 });
 
-app.listen(8080, () => {
-  console.log('App running on http://localhost:8080/');
+app.listen(process.env.PORT, () => {
+  console.log('App running...');
 });
