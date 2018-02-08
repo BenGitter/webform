@@ -1,0 +1,114 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: linear-gradient(to bottom right, rgba(160,170,240,.3), rgba(160,170,240,.5));
+}
+
+.form-wrapper{
+  box-sizing: border-box;
+  width: 80vw;
+  min-width: 700px;
+  max-width: 1000px;
+  height: 450px;
+  margin: auto;
+  margin-top: calc(50vh - 225px);
+  margin-bottom: calc(50vh - 225px);
+  background: white;
+  display: flex;
+  box-shadow: .5px .5px 2px .5px rgba(0,0,0,.2), 0 0 1px .2px rgba(0,0,0,.2);
+}
+
+.left, .right{
+  box-sizing: border-box;
+  width: 50%;
+  padding: 10px;
+}
+
+.left{
+  background: rgba(62, 120, 226, 0.8);
+  color: white;
+  padding: 20px;
+}
+
+.left p{
+  font-size: 15px;
+  color: rgba(255,255,255,.9);
+}
+
+.right{
+  padding-top: 20px;
+}
+
+.success{
+  display: block;
+  opacity: 0;
+  text-align: center;
+  position: relative;
+  top: -250px;
+  height: 100px;
+  z-index: -1;
+  height: 0;
+}
+
+@media screen and (max-width: 700px){
+  .form-wrapper{
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-wrap: wrap;
+    height: auto;
+    min-width: 100%;
+  }
+  .left,.right{
+    width: 100%;
+  }
+  .right{
+    padding-bottom: 30px;
+  }
+  body{
+    padding-bottom: -80px;
+    /* overflow: hidden; */
+  }
+}
+
+@media screen and (max-height: 450px){
+  .form-wrapper{
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/* Changes to Materialize.css */
+/* label color */
+.row{
+  margin-bottom: 0 !important;
+}
+.input-field{
+  margin-top: 0;
+}
+.input-field label {
+  color: #000000 !important;
+}
+/* label focus color */
+.input-field input:focus + label {
+  color: #42A5F5 !important;
+}
+/* label underline focus color */
+.input-field input:focus {
+  border-bottom: 1px solid #42A5F5 !important;
+  box-shadow: 0 1px 0 0 #42A5F5 !important;
+}
+/* valid color */
+/* .input-field input[type=text].valid {
+  border-bottom: 1px solid #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+} */
+/* invalid color */
+/* .input-field input[type=text].invalid {
+  border-bottom: 1px solid #000 !important;
+  box-shadow: 0 1px 0 0 #000 !important;
+} */
+/* icon prefix focus color */
+/* .input-field .prefix.active {
+  color: #000 !important;
+} */

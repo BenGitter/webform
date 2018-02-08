@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <title>WebForm</title>
+</head>
+<body>
+  <div class="form-wrapper">
+    <div class="left blue lighten-1">
+      <h2>Ontbijtactie</h2>
+      <p>
+        Via dit formulier kunt u zich aanmelden voor de ontbijtactie van de JV. 
+        U krijgt dan op zaterdag xx maart een ontbijt thuisbezorgd.
+      </p>
+      <p>
+        Als u uw emailadres opgeeft, krijgt u een bevestiging van uw aanmelding.
+      </p>
+    </div>
+    <div class="right">
+      <div class="row">
+        <form id="form" class="col s12">
+          <div class="row">
+            <div class="input-field col s12 blue-text">
+              <input required class="validate" pattern="[A-Za-z.\- ]+" id="full_name" type="text">
+              <label for="full_name">Naam</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 blue-text">
+              <input required class="validate" pattern="[0-9]+" id="phone" type="text">
+              <label for="phone">Telefoonnummer</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 blue-text">
+              <input required class="validate" pattern="[A-Za-z0-9.\- ]+" id="street" type="text">
+              <label for="street">Straat + nummer</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 blue-text">
+              <input required class="validate" pattern="[0-9]{4}[ ]?[A-Z]{2}" id="postcode" type="text">
+              <label for="postcode">Postcode</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 blue-text">
+              <input required class="validate" id="amount" type="number" min=1 max=20>
+              <label for="amount">Aantal personen</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 blue-text">
+              <input class="validate" id="email" type="email">
+              <label for="email">E-mailadres</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12 right-align">
+              <button type="submit" class="btn blue">Aanmelden</button>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Succes message -->
+      <div class="success">
+        <i class="large green-text material-icons">check</i>
+        <p class="green-text">Aangemeld!</p>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
